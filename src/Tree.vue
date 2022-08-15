@@ -31,7 +31,7 @@ const linkLayouts = {
 let i = 0
 const types = ['tree', 'cluster']
 const layouts = ['circular', 'horizontal', 'vertical']
-const nodeDisplays = ['all', 'leaves', 'extremities']
+const nodeDisplays = ['all', 'leaves', 'extremities', 'none']
 const linkLayoutsType = ['bezier', 'orthogonal']
 
 const props = {
@@ -148,6 +148,8 @@ function onAllChilddren (d, callback, fatherVisible = undefined) {
 
 function filterTextNode (nodeTextDisplay, root) {
   switch (nodeTextDisplay) {
+		case 'none':
+			return false
     case 'all':
       return d => true
 
