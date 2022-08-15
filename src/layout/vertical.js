@@ -35,8 +35,8 @@ export default {
       x: !children ? leaf : 0,
       y: !children ? 0 : -(minMargin + node),
       rotate: 90,
-      textRotate: !children ? 0 : -90,
-      anchor: !children ? 'start' : 'middle'
+      textRotate: -90,
+      anchor: 'middle'
     }
   }
 }
