@@ -149,7 +149,7 @@ function onAllChilddren (d, callback, fatherVisible = undefined) {
 function filterTextNode (nodeTextDisplay, root) {
   switch (nodeTextDisplay) {
 		case 'none':
-			return false
+			return d => false
     case 'all':
       return d => true
 
