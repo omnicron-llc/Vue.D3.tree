@@ -8,12 +8,12 @@ import noBehavior from './behaviors/noBehavior'
 import behaviorMixin from './behaviors/behaviorMixin'
 
 export {
-    tree,
-    hierarchicalEdgeBundling,
-    behaviorMixin,
-    collapseOnClick,
-    noBehavior,
-    selectOnTextClick,
-    popUpOnClickText,
-    popUpOnHoverText
+		tree,
+		hierarchicalEdgeBundling,
+		behaviorMixin,
+		collapseOnClick,
+		noBehavior,
+		selectOnTextClick,
+		popUpOnClickText,
+		popUpOnHoverText
 }
