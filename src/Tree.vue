@@ -167,7 +167,7 @@ const defaultBehaviors = [
 	popUpOnClickText
 ]
 
-const popUpClass = 'pop-up-tree'
+const popUpClass = 'node-popup'
 
 export default {
 	name: 'D3Tree',
@@ -182,13 +182,13 @@ export default {
 	},
 
 	render (h) {
-		const {$behaviorProps: behaviorProps, $scopedSlots: {popUp}, resetPopUp: close, contextMenu: {node, style}} = this
+		const {$behaviorProps: behaviorProps, $scopedSlots: {popup}, resetPopUp: close, contextMenu: {node, style}} = this
 		const slotNodes = defaultBehaviors.map(component => h(component, this._b({}, component.name, behaviorProps, false)))
 		const menu = h('div', {
 			class: popUpClass,
 			style
 		}, [
-			(!popUp || (node === null)) ? null : popUp({node, data: node.data, close})
+			(!popup || (node === null)) ? null : popup({node, data: node.data, close})
 		])
 
 		return h('div', {class: 'viewport treeclass', directives: [{name: 'resize', value: this.resize}]}, [
@@ -701,17 +701,8 @@ export default {
 </script>
 
 <style>
-.pop-up-tree {
+.node-popup {
 	position: absolute;
-}
-
-.treeclass .nodetree	circle {
-	fill: #999;
-}
-
-.treeclass .node--internal circle {
-	cursor: pointer;
-	fill:	#555;
 }
 
 .treeclass .nodetree text {
