@@ -454,7 +454,7 @@ export default {
 			this.maxTextLength = {first, last}
 			const size = this.getSize()
 			this.applyZoom(size)
-			this.nodeSize(20)
+			console.log(this)
 			//this.layout.size(this.internaldata.tree, size, this.margin, this.maxTextLength)
 			return this.updateGraph(source)
 		},
