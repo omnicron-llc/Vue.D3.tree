@@ -114,11 +114,11 @@ const props = {
 	},
 	leafTextMargin: {
 		type: Number,
-		default: 30
+		default: 6
 	},
 	nodeTextMargin: {
 		type: Number,
-		default: 30
+		default: 6
 	},
 	popUpPlacement: {
 		type: String,
@@ -454,7 +454,7 @@ export default {
 			this.maxTextLength = {first, last}
 			const size = this.getSize()
 			this.applyZoom(size)
-			console.log('tree', this.internaldata.tree);
+			console.log(this.layout.size.toString())
 			this.layout.size(this.internaldata.tree, size, this.margin, this.maxTextLength)
 			return this.updateGraph(source)
 		},
