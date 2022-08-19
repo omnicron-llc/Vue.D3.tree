@@ -258,8 +258,7 @@ export default {
 
 		getSize () {
 			const {$el: {clientWidth: width, clientHeight: height}} = this
-			width *= 2
-			return { width, height }
+			return { width*2, height }
 		},
 
 		resize () {
