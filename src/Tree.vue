@@ -71,11 +71,11 @@ const props = {
 	},
 	marginX: {
 		type: Number,
-		default: 5
+		default: 20
 	},
 	marginY: {
 		type: Number,
-		default: 5
+		default: 20
 	},
 	nodeText: {
 		type: String,
@@ -443,7 +443,7 @@ export default {
 
 			const leaves = root.leaves()
 			const extremeNodes = text.filter(d => leaves.indexOf(d) !== -1).nodes()
-			const last = Math.max(...extremeNodes.map(d => d.getComputedTextLength())) + leafTextMargin
+			const last = Math.max(...extremeNodes.map(node => node.getComputedTextLength())) + leafTextMargin
 			const textNode = text.node()
 			const first = (textNode ? textNode.getComputedTextLength() : 0) + leafTextMargin
 			if (last <= this.maxTextLength.last && first <= this.maxTextLength.first) {
@@ -452,8 +452,6 @@ export default {
 			}
 
 			this.maxTextLength = {first, last}
-			console.log('mtl', this.maxTextLength)
-			this.maxTextLength.last *= 2
 			const size = this.getSize()
 			this.applyZoom(size)
 			this.layout.size(this.internaldata.tree, size, this.margin, this.maxTextLength)
