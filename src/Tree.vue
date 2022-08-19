@@ -452,7 +452,6 @@ export default {
 			}
 
 			this.maxTextLength = {first, last}
-			console.log('mtl', this.maxTextLength)
 			const size = this.getSize()
 			this.applyZoom(size)
 			this.layout.size(this.internaldata.tree, size, this.margin, this.maxTextLength)
