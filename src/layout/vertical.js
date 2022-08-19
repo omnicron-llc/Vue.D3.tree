@@ -8,7 +8,7 @@ function transformNode (x, y) {
 export default {
   size (tree, size, margin, {last}) {
     tree.size([size.width, size.height])
-		tree.nodeSize([50, 50])
+		tree.nodeSize([100, 100])
 		console.log('layout tree', tree)
   },
 
