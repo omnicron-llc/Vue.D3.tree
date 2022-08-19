@@ -71,11 +71,11 @@ const props = {
 	},
 	marginX: {
 		type: Number,
-		default: 20
+		default: 50
 	},
 	marginY: {
 		type: Number,
-		default: 20
+		default: 50
 	},
 	nodeText: {
 		type: String,
