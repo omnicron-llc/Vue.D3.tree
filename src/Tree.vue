@@ -451,7 +451,7 @@ export default {
 				return Promise.all([allNodesPromise, exitingNodesPromise, updateAndNewLinksPromise, exitingLinksPromise])
 			}
 
-			this.maxTextLength = {first, last}
+			this.maxTextLength = {400, 400}
 			const size = this.getSize()
 			this.applyZoom(size)
 			this.layout.size(this.internaldata.tree, size, this.margin, this.maxTextLength)
