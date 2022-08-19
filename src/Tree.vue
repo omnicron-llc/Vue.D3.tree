@@ -451,6 +451,7 @@ export default {
 				return Promise.all([allNodesPromise, exitingNodesPromise, updateAndNewLinksPromise, exitingLinksPromise])
 			}
 
+			last = 400
 			this.maxTextLength = {first, last}
 			const size = this.getSize()
 			this.applyZoom(size)
