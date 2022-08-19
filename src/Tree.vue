@@ -443,7 +443,7 @@ export default {
 
 			const leaves = root.leaves()
 			const extremeNodes = text.filter(d => leaves.indexOf(d) !== -1).nodes()
-			const last = Math.max(...extremeNodes.map(node => node.getComputedTextLength())) + leafTextMargin
+			const last = Math.max(...extremeNodes.map(d => d.getComputedTextLength())) + leafTextMargin
 			const textNode = text.node()
 			const first = (textNode ? textNode.getComputedTextLength() : 0) + leafTextMargin
 			if (last <= this.maxTextLength.last && first <= this.maxTextLength.first) {
