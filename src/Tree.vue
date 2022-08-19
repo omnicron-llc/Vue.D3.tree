@@ -455,6 +455,7 @@ export default {
 			const size = this.getSize()
 			console.log('size', size)
 			this.layout.size(this.internaldata.tree, size, this.margin, this.maxTextLength)
+			size.width *= 2
 			this.applyZoom(size)
 			return this.updateGraph(source)
 		},
