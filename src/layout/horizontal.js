@@ -8,7 +8,7 @@ export default {
   size (tree, size, margin, {last, first}) {
     tree.size([size.height - (margin.y * 2), size.width - (margin.x * 2) - (last + first)])
 		tree.separation(function(a, b) {
-			return 50
+			return 500
 		});
   },
 
