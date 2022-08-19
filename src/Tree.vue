@@ -71,11 +71,11 @@ const props = {
 	},
 	marginX: {
 		type: Number,
-		default: 50
+		default: 20
 	},
 	marginY: {
 		type: Number,
-		default: 50
+		default: 20
 	},
 	nodeText: {
 		type: String,
@@ -454,9 +454,8 @@ export default {
 			this.maxTextLength = {first, last}
 			const size = this.getSize()
 			this.applyZoom(size)
+			console.log('MTL', this.maxTextLength)
 			this.layout.size(this.internaldata.tree, size, this.margin, this.maxTextLength)
-			console.log(this.internaldata.tree, size, this.margin, this.maxTextLength)
-			console.log(this.layout.size())
 			return this.updateGraph(source)
 		},
 
