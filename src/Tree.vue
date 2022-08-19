@@ -114,11 +114,11 @@ const props = {
 	},
 	leafTextMargin: {
 		type: Number,
-		default: 6
+		default: 12
 	},
 	nodeTextMargin: {
 		type: Number,
-		default: 6
+		default: 12
 	},
 	popUpPlacement: {
 		type: String,
