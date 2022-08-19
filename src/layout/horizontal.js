@@ -6,9 +6,7 @@ function transformNode (x, y) {
 
 export default {
   size (tree, size, margin, {last, first}) {
-		tree.separation(function(a, b) {
-			return 3
-		}).size([size.height - (margin.y * 2), size.width - (margin.x * 2) - (last + first)])
+		tree.size([size.height - (margin.y * 2), 2* (size.width - (margin.x * 2) - (last + first))])
   },
 
   transformNode,
