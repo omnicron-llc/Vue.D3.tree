@@ -444,14 +444,15 @@ export default {
 			const leaves = root.leaves()
 			const extremeNodes = text.filter(d => leaves.indexOf(d) !== -1).nodes()
 			const last = Math.max(...extremeNodes.map(node => node.getComputedTextLength())) + leafTextMargin
+			last = 400
 			const textNode = text.node()
 			const first = (textNode ? textNode.getComputedTextLength() : 0) + leafTextMargin
+			first = 400
 			if (last <= this.maxTextLength.last && first <= this.maxTextLength.first) {
 				this._scheduledRedraw = false
 				return Promise.all([allNodesPromise, exitingNodesPromise, updateAndNewLinksPromise, exitingLinksPromise])
 			}
 
-			last = 400
 			this.maxTextLength = {first, last}
 			const size = this.getSize()
 			this.applyZoom(size)
