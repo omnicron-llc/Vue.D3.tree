@@ -258,6 +258,7 @@ export default {
 
 		getSize () {
 			const {$el: {clientWidth: width, clientHeight: height}} = this
+			width *= 2
 			return { width, height }
 		},
 
@@ -454,7 +455,6 @@ export default {
 			this.maxTextLength = {first, last}
 			const size = this.getSize()
 			console.log('size', size)
-			size.width *= 2
 			this.layout.size(this.internaldata.tree, size, this.margin, this.maxTextLength)
 			this.applyZoom(size)
 			return this.updateGraph(source)
