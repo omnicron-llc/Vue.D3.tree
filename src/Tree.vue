@@ -455,7 +455,6 @@ export default {
 			const size = this.getSize()
 			this.applyZoom(size)
 			console.log('MTL', this.maxTextLength)
-			this.layout.separation(3)
 			this.layout.size(this.internaldata.tree, size, this.margin, this.maxTextLength)
 			return this.updateGraph(source)
 		},
